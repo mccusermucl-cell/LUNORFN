@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Lunor</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- BACKGROUND LAYER -->
+<div class="bg"></div>
+
+<!-- TOP BANNER -->
+<div class="banner">
+<img src="images/lunor-banner.png">
+</div>
+
+<!-- NAV -->
+<nav>
+<div class="left">
+<img src="images/logo.png" class="logo">
+<span>PROJECT LUNOR</span>
+</div>
+
+<div class="right">
+<a href="#trailer">Trailer</a>
+<a href="#features">Features</a>
+<a href="https://discord.gg/D6pfujsWz8">Discord</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-bg"></div>
+
+<div class="hero-content">
+<h1>PROJECT <span>LUNOR</span></h1>
+<p>Chapter 4 Season 2 reimagined — smooth, optimized, alive experience.</p>
+
+<div class="buttons">
+<button onclick="openPopup()">GET STARTED</button>
+<a href="https://discord.gg/D6pfujsWz8">JOIN DISCORD</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAILER -->
+<section id="trailer">
+<h2>OFFICIAL TRAILER</h2>
+
+<div class="video-wrap">
+<video controls>
+<source src="videos/trailer.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+
+<h2>WHY PROJECT LUNOR?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>⚡ PERFORMANCE</h3>
+<p>Ultra optimized smooth gameplay</p>
+</div>
+
+<div class="card">
+<h3>🛒 ITEM SHOP</h3>
+<p>Daily rotating cosmetics</p>
+</div>
+
+<div class="card">
+<h3>🌎 SERVERS</h3>
+<p>NA / EU stable routing</p>
+</div>
+
+<div class="card">
+<h3>🏆 RANKED</h3>
+<p>Competitive progression system</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="box">
+<h2>GET LAUNCHER IN DISCORD</h2>
+<div class="arrow">⬇</div>
+<a href="https://discord.gg/D6pfujsWz8">OPEN DISCORD</a>
+<button onclick="closePopup()">CLOSE</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

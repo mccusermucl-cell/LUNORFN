@@ -1,0 +1,254 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins;
+background:#050508;
+color:white;
+overflow-x:hidden;
+line-height:1.5;
+}
+
+/* BACKGROUND (less noisy, smoother) */
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(139,92,246,0.25), transparent 45%),
+radial-gradient(circle at 80% 70%, rgba(168,85,247,0.20), transparent 50%);
+filter:blur(20px);
+z-index:-2;
+}
+
+/* BANNER (cleaner, less harsh) */
+.banner{
+text-align:center;
+padding:10px;
+background:linear-gradient(90deg,#6d28d9,#a855f7);
+letter-spacing:1px;
+font-size:13px;
+opacity:0.95;
+}
+
+/* NAV (clean spacing + alignment fix) */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+width:34px;
+height:34px;
+border-radius:8px;
+}
+
+nav span{
+font-family:Orbitron;
+font-weight:700;
+letter-spacing:2px;
+font-size:14px;
+opacity:0.9;
+}
+
+.right a{
+color:white;
+margin:0 14px;
+text-decoration:none;
+opacity:0.65;
+transition:0.25s ease;
+font-size:14px;
+}
+
+.right a:hover{
+opacity:1;
+color:#a855f7;
+}
+
+/* HERO (much cleaner spacing + hierarchy fix) */
+.hero{
+height:88vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+padding:0 20px;
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+background:url("images/hero-bg.jpg") center/cover no-repeat;
+opacity:0.18;
+filter:blur(1px) saturate(1.2);
+transform:scale(1.05);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+animation:fadeUp 0.9s ease;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(25px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.hero h1{
+font-size:70px;
+font-family:Orbitron;
+letter-spacing:3px;
+line-height:1.1;
+}
+
+.hero span{
+color:#a855f7;
+text-shadow:0 0 18px rgba(168,85,247,0.6);
+}
+
+.hero p{
+max-width:580px;
+margin:18px auto;
+opacity:0.75;
+font-size:15px;
+}
+
+/* BUTTONS (clean hover + spacing fix) */
+.buttons{
+margin-top:22px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+button{
+padding:12px 26px;
+border:none;
+border-radius:10px;
+background:#8b5cf6;
+color:white;
+cursor:pointer;
+transition:0.25s ease;
+font-weight:600;
+font-size:13px;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(139,92,246,0.25);
+}
+
+.buttons a{
+padding:12px 20px;
+border-radius:10px;
+color:#c4b5fd;
+text-decoration:none;
+font-size:13px;
+border:1px solid rgba(139,92,246,0.3);
+transition:0.25s;
+}
+
+.buttons a:hover{
+border-color:#8b5cf6;
+color:white;
+}
+
+/* SECTIONS (better spacing consistency) */
+section{
+padding:70px 10%;
+text-align:center;
+}
+
+h2{
+font-family:Orbitron;
+letter-spacing:2px;
+margin-bottom:25px;
+font-size:22px;
+opacity:0.95;
+}
+
+/* VIDEO (fixed proportions + cleaner frame) */
+.video-wrap{
+max-width:950px;
+margin:auto;
+border-radius:16px;
+overflow:hidden;
+border:1px solid rgba(139,92,246,0.35);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+video{
+width:100%;
+display:block;
+}
+
+/* FEATURES (less cluttered look) */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:16px;
+}
+
+.card{
+background:rgba(255,255,255,0.04);
+padding:20px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.06);
+transition:0.25s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.06);
+border-color:rgba(168,85,247,0.25);
+}
+
+/* POPUP (clean blur + centered better) */
+.popup{
+position:fixed;
+inset:0;
+display:none;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(6px);
+}
+
+.box{
+background:#11111a;
+padding:32px;
+border-radius:14px;
+text-align:center;
+border:1px solid rgba(168,85,247,0.4);
+width:320px;
+}
+
+.box h2{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.arrow{
+font-size:42px;
+animation:bounce 1s infinite;
+color:#a855f7;
+}
+
+@keyframes bounce{
+50%{transform:translateY(8px);}
+}
